@@ -50,7 +50,7 @@ incidencias). Ninguno de los dos alcanza solo.
 7. **Cerrá** sólo lo que de verdad terminó: la persona respondió y quedó
    conforme, o el caso no requería nada. Cerrar exige escribir la resolución en
    una frase que sirva dentro de un mes.
-8. **Reportá** en `#dc-operacion` (ver formato abajo). Si no hubo casos, una línea.
+8. **Reportá** en `#de-confianza-operacion` (ver formato abajo). Si no hubo casos, una línea.
 
 ## Reglas de los borradores
 
@@ -73,7 +73,7 @@ incidencias). Ninguno de los dos alcanza solo.
 - **Plata**: cobro duplicado, una seña que el vecino demuestra haber pagado y no
   figura. Va a quien opera conciliación, con la incidencia abierta.
 
-## Formato del reporte en `#dc-operacion`
+## Formato del reporte en `#de-confianza-operacion`
 
 ```
 Supervisión 14:30 · 3 casos nuevos · 1 cerrado · 2 esperando

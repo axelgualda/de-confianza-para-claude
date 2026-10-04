@@ -6,7 +6,7 @@ El plugin del equipo de **de confianza**. Instalarlo te deja, en tu propio Claud
 |---|---|
 | **de-confianza** | El backoffice entero: métricas, pedidos, técnicos, señas, seguimientos, conversaciones del agente, catálogo y precios, incidencias. Ver y hacer, según tu rol. |
 | **chatty** | El WhatsApp del servicio: chats escalados, pendientes, borradores. |
-| **slack** | Los canales `#dc-*` del Slack de Chatty. |
+| **slack** | `#de-confianza` y `#de-confianza-operacion`, en el Slack de Chatty. |
 | **notion** | Tareas, decisiones, influencers, contenido y pagos del lanzamiento. |
 
 Y cuatro habilidades que Claude usa solo cuando hacen falta:

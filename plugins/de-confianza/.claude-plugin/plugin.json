@@ -1,7 +1,7 @@
 {
   "name": "de-confianza",
   "description": "Todo lo que el equipo de de confianza necesita en su Claude: el WhatsApp del servicio (Chatty), el backoffice entero (pedidos, técnicos, señas, incidencias), Slack del equipo y Notion, más el contexto del proyecto, la marca y el criterio para supervisar lo que el agente no resolvió.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "de confianza",
     "email": "axel@letschatty.com"

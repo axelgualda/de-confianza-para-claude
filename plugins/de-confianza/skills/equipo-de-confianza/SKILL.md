@@ -19,18 +19,22 @@ toda CABA. Volumen chico a propósito: es para corregir con gente real.
 
 ## Quién hace qué
 
-| Persona | Rol | Escribile por |
-|---|---|---|
-| Axel | Dirección: decide, aprueba pagos, define las rutinas | cualquier canal |
-| Lari | PM y vínculo con la UTN: tablero, ritmo semanal, legales, catálogo, coordina pagos | `#dc-general`, `#dc-utn` |
-| Alex y Balestro | Dueños institucionales (UTN): firman | vía Lari |
-| Alejandra | UTN, Centro de Empleabilidad: convoca a los técnicos, primer contacto, conflictos | `#dc-utn` |
-| Alan | Producto (CTO): cambios de la app, integración de pagos | `#dc-producto` |
-| Flor | Alta en Meta del número, QA del flujo, experiencia, primera operadora del backoffice | `#dc-producto`, `#dc-operacion` |
-| Mica y Bren | Estrategia de marketing, influencers | `#dc-lanzamiento` |
-| Berni | Community: redes, documentar el proceso | `#dc-lanzamiento` |
+| Persona | Rol |
+|---|---|
+| Axel | Dirección: decide, aprueba pagos, define las rutinas |
+| Lari | PM y vínculo con la UTN: tablero, ritmo semanal, legales, catálogo, coordina pagos |
+| Alex y Balestro | Dueños institucionales (UTN): firman |
+| Alejandra | UTN, Centro de Empleabilidad: convoca a los técnicos, primer contacto, conflictos |
+| Alan | Producto (CTO): cambios de la app, integración de pagos |
+| Flor | Alta en Meta del número, QA del flujo, experiencia, primera operadora del backoffice |
+| Mica y Bren | Estrategia de marketing, influencers |
+| Berni | Community: redes, documentar el proceso |
 
 Si no sabés de quién es algo, es de Lari.
+
+En Slack (el de Chatty) hay **dos canales y nada más**: `#de-confianza` para
+todo el equipo y `#de-confianza-operacion` para los casos reales. Lo de pagos va
+por mensaje directo entre Lari y Axel.
 
 ## Qué conector para qué
 
@@ -41,7 +45,7 @@ cuenta; después queda.
 |---|---|---|
 | Saber cómo va el servicio o tocar algo del backoffice | **de-confianza** | métricas, pedidos, técnicos y su verificación, señas y conciliación, seguimientos, conversaciones del agente, catálogo y precios, **incidencias** |
 | Ver o contestar conversaciones de WhatsApp del número del servicio | **chatty** | chats escalados, pendientes, sin leer, borradores |
-| Hablar con el equipo | **slack** | canales `#dc-*` en el Slack de Chatty |
+| Hablar con el equipo | **slack** | `#de-confianza` y `#de-confianza-operacion` en el Slack de Chatty |
 | Tareas, decisiones, influencers, contenido, pagos | **notion** | la base «Tareas» manda: si no está ahí, no existe |
 
 Detalle de cada uno y sus trampas: `references/conectores.md`.

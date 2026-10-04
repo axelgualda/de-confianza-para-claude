@@ -35,17 +35,15 @@ dejar borradores o responder.
 
 ## slack — el equipo
 
-El equipo usa el **Slack de Chatty**, en los canales que empiezan con `dc-`:
+El equipo usa el **Slack de Chatty**, con dos canales y nada más:
 
 | Canal | Para qué |
 |---|---|
-| `#dc-general` | todo el equipo, plan y resumen de la semana |
-| `#dc-producto` | app, pagos, QA (Alan, Flor, Axel) |
-| `#dc-lanzamiento` | marketing, redes, influencers (Mica, Bren, Berni, Axel) |
-| `#dc-utn` | UTN, técnicos, legales (Lari, Alejandra, Axel) |
-| `#dc-operacion` | casos reales, borradores para aprobar (Flor, Lari, Axel) |
-| `#dc-pagos` | pagos del equipo (Lari, Axel) |
-| `#dc-rutinas` | donde postean las rutinas; no se conversa ahí |
+| `#de-confianza` | Todo el equipo: conversación, plan y resumen de la semana, avisos de las rutinas |
+| `#de-confianza-operacion` | Casos reales: lo que el agente no resolvió, borradores para aprobar, incidencias |
+
+Pagos del equipo: mensaje directo entre Lari y Axel, nunca en un canal.
+Si un tema crece y tapa al resto, se abre un hilo, no un canal.
 
 El conector de Slack de Claude acepta **un solo workspace por cuenta**: si ya lo
 tenías conectado al de Chatty, sirve tal cual.

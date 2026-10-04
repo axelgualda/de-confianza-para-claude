@@ -8,7 +8,7 @@ description: Usala para correr o programar las rutinas que sostienen el trabajo 
 Las rutinas existen para que lo que se definió se haga sin que nadie tenga que
 perseguirlo a mano. Leen **Notion** (la base «Tareas» manda) y, cuando hace falta,
 el conector **de-confianza** para el estado real del servicio; publican en
-**Slack** (`#dc-*`). Cada una está escrita abajo como prompt listo para programar.
+**Slack** (`#de-confianza` y `#de-confianza-operacion`). Cada una está escrita abajo como prompt listo para programar.
 
 ## Reglas de todas
 
@@ -21,11 +21,11 @@ el conector **de-confianza** para el estado real del servicio; publican en
 5. **Si no hay nada, una línea.** Permiso explícito de volver sin nada.
 6. **Una tarea sin responsable, fecha o estado se reporta como tal**, no se adivina.
 7. **No escriben en el backoffice.** Leen. Publicar en Slack es su única acción
-   hacia afuera, y siempre en los canales `#dc-*`.
+   hacia afuera: en esos dos canales, o por mensaje directo para pagos.
 8. **El camino crítico va primero**: el número de WhatsApp (Meta), los pagos, y
    la cantidad de técnicos de aire acondicionado verificados (meta: 15 al 23/10).
 
-## Lunes 9:00 — el plan de la semana (`#dc-general`)
+## Lunes 9:00 — el plan de la semana (`#de-confianza`)
 
 > Leé en Notion las tareas con fecha esta semana o vencidas y no hechas.
 > Agrupalas por persona. Para cada persona: sus tareas de la semana en una línea
@@ -34,9 +34,9 @@ el conector **de-confianza** para el estado real del servicio; publican en
 > 19–23/10), los hitos de esta semana y el estado del camino crítico (número de
 > WhatsApp, pagos, técnicos verificados — este último del conector
 > de-confianza). Cerrá con las tareas sin responsable o sin fecha. Publicá en
-> `#dc-general`.
+> `#de-confianza`.
 
-## Todos los días 18:00 — lo trabado y lo vencido (`#dc-general`)
+## Todos los días 18:00 — lo trabado y lo vencido (`#de-confianza`)
 
 > Leé en Notion las tareas vencidas sin hacer y las marcadas «Trabado». Para cada
 > una: qué es, de quién es, hace cuánto, y de quién depende si está trabada.
@@ -44,21 +44,21 @@ el conector **de-confianza** para el estado real del servicio; publican en
 > además un mensaje directo a Axel. Compará con el estado de ayer y empezá por
 > lo que se destrabó. Si no hay nada vencido ni trabado, «Todo al día» y listo.
 
-## Viernes 17:00 — el resumen de la semana (`#dc-general`)
+## Viernes 17:00 — el resumen de la semana (`#de-confianza`)
 
 > Armá el resumen de la semana: qué se cerró (de Notion), qué se atrasó y por
 > qué, cómo está el camino crítico, y los números del servicio de la semana
 > desde de-confianza (pedidos, postulaciones, señas, técnicos aprobados,
 > incidencias abiertas y cerradas). Terminá con «Riesgo para el 23/10» en una
 > frase honesta: si algo del camino crítico no llega, decilo. Publicalo en
-> `#dc-general`.
+> `#de-confianza`.
 
-## Último día hábil del mes — los pagos del equipo (`#dc-pagos`)
+## Último día hábil del mes — los pagos del equipo (mensaje directo a Lari y Axel)
 
 > Leé la base «Pagos» de Notion para el mes en curso. Listá persona, concepto y
 > estado (sin aprobar / aprobado / pagado). Marcá lo que falte cargar comparando
-> con los acuerdos vigentes de la base. Publicalo en `#dc-pagos` mencionando a
-> Lari y a Axel para que aprueben. No muevas plata ni marques nada como pagado.
+> con los acuerdos vigentes de la base. Mandáselo por mensaje directo a Lari
+> y a Axel para que aprueben (nunca a un canal). No muevas plata ni marques nada como pagado.
 
 ## Cada 30 minutos (desde la beta) — supervisión
 
