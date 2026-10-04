@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1080">
+<title>de confianza — plantilla 1080×1080</title>
+<!--
+  Plantilla mínima de una pieza cuadrada (1080×1080), armada con la estructura
+  que fija el manual §12:
+    · arriba, un label en mono (contexto: rubro, zona, canal);
+    · en el medio, UN solo titular;
+    · abajo, siempre en el mismo lugar: logotipo a la izquierda, emblema a la derecha.
+  La marca aparece dos veces (en el titular como frase-marca y en el pie como
+  logotipo): es el máximo. El único ámbar son los puntos del logo; si agregás
+  un botón o un resaltado ámbar, es EL elemento ámbar de la pieza y no hay otro.
+
+  Para editar: cambiá el label y el titular. No cambies el pie.
+  Si la pieza va como artifact de claude.ai, embebé tokens.css, las .woff2 y
+  utn-emblema.png como data: URI (el artifact no lee archivos al lado).
+-->
+<link rel="stylesheet" href="tokens.css">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--lila-papel); }
+  .pieza {
+    width: 1080px;
+    height: 1080px;
+    box-sizing: border-box;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    background: var(--lila-papel);
+    color: var(--tinta);
+    font-family: var(--fuente-ui);
+    overflow: hidden;
+  }
+  .pieza .label-mono { font-size: 25px; letter-spacing: 5px; }
+  .pieza .centro { flex: 1; display: flex; align-items: center; }
+  .pieza .titulo { font-size: 96px; letter-spacing: -3.4px; line-height: 0.98; margin: 0; }
+  .pieza .pie { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; }
+  .pieza .pie .logotipo { font-size: 60px; }
+  .pieza .pie .bajada {
+    font-family: var(--fuente-mono);
+    font-size: 21px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: var(--texto-terciario);
+    margin-top: 18px;
+  }
+  /* El emblema nunca más alto que el logotipo con el que convive (§08). */
+  .pieza .pie .emblema { width: 56px; height: 56px; }
+</style>
+</head>
+<body>
+  <main class="pieza">
+    <!-- Label: rubro · zona · canal. En mono, mayúsculas. -->
+    <div class="label-mono">Aire acondicionado · CABA</div>
+
+    <!-- Un solo titular. Línea de campaña 02 del manual (§10). -->
+    <div class="centro">
+      <h1 class="titulo">Si vas a meter a alguien a tu casa, que sea <span class="marca-en-frase" style="color: var(--violeta)">de confianza<span class="punto">.</span></span></h1>
+    </div>
+
+    <!-- Pie fijo: logotipo a la izquierda, emblema a la derecha. -->
+    <div class="pie">
+      <div>
+        <div class="logotipo">de confianza<span class="punto">.</span></div>
+        <div class="bajada">Pedí por WhatsApp · sin apps</div>
+      </div>
+      <span class="emblema" role="img" aria-label="Emblema UTN"></span>
+    </div>
+  </main>
+</body>
+</html>

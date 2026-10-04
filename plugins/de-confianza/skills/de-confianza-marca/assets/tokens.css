@@ -1,0 +1,232 @@
+/* ==========================================================================
+   de confianza — tokens de marca
+   ==========================================================================
+
+   Fuente de verdad: docs/brand/De Confianza - Manual de marca.html (v1, agosto
+   2026). Los valores se copiaron de ahí y de la implementación viva del
+   backoffice (app/backoffice/app/globals.css). Si algo de este archivo
+   contradice al manual, gana el manual.
+
+   Este archivo va al lado de las tres .woff2 y de los dos PNG de la UTN: las
+   rutas son relativas a él. Si armás un HTML que no puede leer archivos al
+   lado (por ejemplo un artifact de claude.ai), embebé las fuentes y las
+   imágenes como data: URI en base64.
+   ========================================================================== */
+
+/* --- fuentes (self-hosteadas, sin request a Google) ---------------------- */
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("space-grotesk-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("jetbrains-mono-latin.woff2") format("woff2");
+}
+
+/* Newsreader viene SÓLO en italic, a propósito: es el logotipo y nada más
+   (manual §06). Tener la redonda a mano sería invitar a usarla. */
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("newsreader-italic-latin.woff2") format("woff2");
+}
+
+:root {
+  /* --- paleta (manual §04) ---------------------------------------------- */
+  --violeta: #4b2e83;          /* principal. Logo sobre claro, bloques, títulos, íconos. ≈45% */
+  --violeta-profundo: #2a1b47; /* fondos oscuros, piezas nocturnas, cierres. Nunca texto violeta encima. ≈20% */
+  --hueso: #f0e9db;            /* logo y texto sobre oscuro. ≈15% */
+  --ambar: #f0b429;            /* SÓLO lo que se toca o se destaca. ≈5%. Un solo elemento por pieza además del punto. */
+  --lila-papel: #f4f1f7;       /* fondo claro por defecto de piezas y web */
+  --bruma: #e4dcec;            /* bloques secundarios, placeholders de foto, separadores */
+  --tinta: #1b1424;            /* texto sobre claro. No es negro puro. */
+  --lavanda: #b9a0e8;          /* sólo texto secundario sobre oscuro y estados deshabilitados. Nunca el logo. */
+
+  /* --- fuera de la paleta del manual (vienen de la implementación) ------- */
+  --cream: #f7f4fa;            /* superficie clara secundaria. Está en el CSS del manual, no en sus muestras. */
+  --blanco: #ffffff;           /* superficies: tarjetas, burbujas de chat */
+  --texto-secundario: #514761; /* backoffice: texto secundario fuerte */
+  --texto-terciario: #6e6379;  /* backoffice y landing: labels, texto terciario */
+  --verde: #12894c;            /* semántica de UI (confirmado, pagado). No es de marca. */
+  --rojo: #b3402f;             /* el ÚNICO color de alarma. No es de marca y NO es el bordó UTN. */
+
+  /* Derivados del ámbar para interfaces (globals.css): el ámbar puro no se
+     lee como texto sobre claro. No se usan en piezas de redes. */
+  --ambar-texto: #7d5300;
+  --ambar-borde: #c98f0d;
+
+  /* El bordó de la UTN NO tiene token a propósito: #C00A2E vive sólo adentro
+     del logo completo de UTN.BA (utn-ba.png) y no entra a nuestra paleta. */
+
+  /* --- tipografías (manual §06) ----------------------------------------- */
+  --fuente-logo: "Newsreader", Georgia, "Times New Roman", serif; /* italic 500, SÓLO logotipo y la frase-marca */
+  --fuente-ui: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --fuente-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --tracking-logo: -0.015em;   /* −1.5% */
+  --tracking-titulo: -0.026em; /* −2.6% (Space Grotesk 600) */
+  --tracking-label: 2.6px;     /* +2.6px en los micro-labels mono (a 13 px) */
+
+  /* --- forma (de la implementación) ------------------------------------- */
+  --radio-pildora: 999px;
+  --radio-tarjeta: 14px;
+}
+
+/* ==========================================================================
+   Primitivas de marca
+   ========================================================================== */
+
+/* El logotipo. Siempre: italic 500, minúsculas, un renglón, punto ámbar.
+   Uso: <span class="logotipo">de confianza<span class="punto">.</span></span>
+   Violeta sobre claro (default), hueso sobre oscuro (.sobre-oscuro),
+   tinta con punto violeta sobre ámbar (.sobre-ambar). */
+.logotipo {
+  font-family: var(--fuente-logo);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: var(--tracking-logo);
+  line-height: 0.95;
+  white-space: nowrap;
+  text-transform: none;
+  color: var(--violeta);
+}
+.logotipo .punto { color: var(--ambar); }
+.logotipo.sobre-oscuro { color: var(--hueso); }
+.logotipo.sobre-ambar { color: var(--tinta); }
+.logotipo.sobre-ambar .punto { color: var(--violeta); }
+
+/* La marca dentro de una frase ("Si es de UTN, es de confianza."): se
+   escribe igual que el logotipo, un poco más grande que el texto que la
+   rodea (el manual usa 1.06–1.12em). */
+.marca-en-frase {
+  font-family: var(--fuente-logo);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: var(--tracking-logo);
+  font-size: 1.08em;
+  white-space: nowrap;
+}
+.marca-en-frase .punto { color: var(--ambar); }
+
+/* El monograma "dc", para 40 px y menos. Proporción del manual: caja de
+   88 px con radio 22 px y "dc" a 58 px. */
+.monograma {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  background: var(--violeta);
+  color: var(--hueso);
+  font-family: var(--fuente-logo);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 58px;
+  letter-spacing: var(--tracking-logo);
+  line-height: 0.95;
+}
+/* Ámbar sólo cuando el contexto ya es violeta y el avatar necesita despegarse. */
+.monograma.ambar { background: var(--ambar); color: var(--tinta); }
+
+/* El emblema UTN solo, como sello de campaña: siempre en color plano
+   (violeta sobre claro, hueso sobre oscuro). El color sale de `color`.
+   Mínimo 20 px de alto; nunca más alto que el logotipo con el que convive. */
+.emblema {
+  display: inline-block;
+  flex: none;
+  width: 76px;
+  height: 76px;
+  background: currentColor;
+  color: var(--violeta);
+  -webkit-mask: url("utn-emblema.png") center / contain no-repeat;
+  mask: url("utn-emblema.png") center / contain no-repeat;
+}
+.emblema.sobre-oscuro { color: var(--hueso); }
+
+/* Micro-label en mono: el label de arriba de cada pieza (rubro, zona, canal). */
+.label-mono {
+  font-family: var(--fuente-mono);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--violeta);
+}
+
+/* Títulos y texto. */
+.titulo {
+  font-family: var(--fuente-ui);
+  font-weight: 600;
+  letter-spacing: var(--tracking-titulo);
+  line-height: 1.04;
+}
+.subtitulo {
+  font-family: var(--fuente-ui);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.35;
+}
+.texto {
+  font-family: var(--fuente-ui);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* El botón ámbar: la acción. Uno solo por pieza o por pantalla. Texto en
+   TINTA, nunca en blanco. */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  border-radius: var(--radio-pildora);
+  background: var(--ambar);
+  color: var(--tinta);
+  font-family: var(--fuente-ui);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  padding: 0.95em 1.6em;
+  text-decoration: none;
+}
+
+/* La píldora "Verificados por la UTN.BA": el eyebrow de la web y de las piezas. */
+.pildora-utn {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  background: var(--blanco);
+  border-radius: var(--radio-pildora);
+  padding: 9px 17px 9px 11px;
+  box-shadow: 0 1px 2px rgba(27, 20, 36, 0.07);
+  font-family: var(--fuente-mono);
+  font-size: 10px;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--violeta);
+}
+.pildora-utn .emblema { width: 21px; height: 21px; }
+
+/* Placeholder de foto (bruma con la descripción de la foto que va). */
+.foto-placeholder {
+  background: var(--bruma);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--fuente-mono);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a79fb2;
+}

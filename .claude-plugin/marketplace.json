@@ -1,0 +1,16 @@
+{
+  "name": "de-confianza-para-claude",
+  "owner": {
+    "name": "de confianza",
+    "email": "axel@letschatty.com"
+  },
+  "metadata": {
+    "description": "El equipo de de confianza en Claude: los conectores (Chatty, de confianza, Slack, Notion) y el criterio para trabajar con ellos."
+  },
+  "plugins": [
+    {
+      "name": "de-confianza",
+      "source": "./plugins/de-confianza"
+    }
+  ]
+}
