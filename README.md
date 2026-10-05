@@ -1,15 +1,22 @@
 # de confianza para Claude
 
-El plugin del equipo de **de confianza**. Instalarlo te deja, en tu propio Claude:
+El plugin del equipo de **de confianza**: las habilidades que le enseñan a tu
+Claude cómo trabajamos. **Los conectores no vienen en el plugin**: se suman como
+cualquier conector, en **Customize → Connectors**, y así andan igual en claude.ai,
+en la app de escritorio y en el celular.
 
-| Conector | Qué te da |
+## 1 · Los conectores (una vez cada uno)
+
+| Conector | Cómo se suma | Qué te da |
 |---|---|
-| **de-confianza** | El backoffice entero: métricas, pedidos, técnicos, señas, seguimientos, conversaciones del agente, catálogo y precios, incidencias. Ver y hacer, según tu rol. |
-| **chatty** | El WhatsApp del servicio: chats escalados, pendientes, borradores. |
-| **slack** | `#de-confianza`, el canal del equipo en el Slack de Chatty. |
-| **notion** | Tareas, decisiones, influencers, contenido y pagos del lanzamiento. |
+| **de confianza** | **Add custom connector**, nombre «de confianza», URL `https://equipo.contratadeconfianza.com/mcp` → Connect. Entrás con tu mail; Axel te tiene que haber dado de alta en Operadores | El backoffice entero: métricas, pedidos, técnicos, señas, seguimientos, conversaciones del agente, catálogo y precios, incidencias. Ver y hacer, según tu rol. |
+| **Chatty** | El conector de Chatty que ya usás (si tenés varias empresas, elegí de confianza) | El WhatsApp del servicio: chats escalados, pendientes, borradores. |
+| **Slack** | Desde el directorio de conectores, con el Slack de Chatty | `#de-confianza`, el canal del equipo en el Slack de Chatty. |
+| **Notion** | Desde el directorio de conectores, con el Notion de de confianza | Tareas, decisiones, influencers, contenido y pagos del lanzamiento. |
 
-Y cuatro habilidades que Claude usa solo cuando hacen falta:
+## 2 · Las habilidades (este plugin)
+
+Cuatro habilidades que Claude usa solo cuando hacen falta:
 
 | Habilidad | Para qué |
 |---|---|

@@ -38,8 +38,11 @@ por mensaje directo entre Lari y Axel.
 
 ## Qué conector para qué
 
-Este plugin trae cuatro conectores. La primera vez cada uno pide entrar con tu
-cuenta; después queda.
+Hay cuatro conectores y **no vienen en este plugin**: cada uno se suma en
+Customize → Connectors (el de de confianza como conector personalizado con
+`https://equipo.contratadeconfianza.com/mcp`). Si a la persona le falta alguno,
+decíselo y mandala a https://equipo.contratadeconfianza.com, que lo explica paso
+a paso.
 
 | Querés… | Conector | Ejemplos |
 |---|---|---|
