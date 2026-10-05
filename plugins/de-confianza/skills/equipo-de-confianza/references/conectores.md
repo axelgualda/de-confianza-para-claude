@@ -35,12 +35,11 @@ dejar borradores o responder.
 
 ## slack — el equipo
 
-El equipo usa el **Slack de Chatty**, con dos canales y nada más:
-
-| Canal | Para qué |
-|---|---|
-| `#de-confianza` | Todo el equipo: conversación, plan y resumen de la semana, avisos de las rutinas |
-| `#de-confianza-operacion` | Casos reales: lo que el agente no resolvió, borradores para aprobar, incidencias |
+El equipo usa el **Slack de Chatty**, con **un solo canal privado**:
+`#de-confianza`. Ahí va todo: la conversación, el plan y el resumen de la semana,
+los avisos de las rutinas y, desde la beta, los casos reales (lo que el agente no
+resolvió, borradores para aprobar, incidencias). Cada caso va en su propio hilo
+para no tapar la conversación del equipo.
 
 Pagos del equipo: mensaje directo entre Lari y Axel, nunca en un canal.
 Si un tema crece y tapa al resto, se abre un hilo, no un canal.

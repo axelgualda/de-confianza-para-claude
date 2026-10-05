@@ -32,8 +32,8 @@ toda CABA. Volumen chico a propósito: es para corregir con gente real.
 
 Si no sabés de quién es algo, es de Lari.
 
-En Slack (el de Chatty) hay **dos canales y nada más**: `#de-confianza` para
-todo el equipo y `#de-confianza-operacion` para los casos reales. Lo de pagos va
+En Slack (el de Chatty) hay **un solo canal**, privado: `#de-confianza`. Ahí va
+todo, y los casos reales de la beta en un hilo cada uno. Lo de pagos va
 por mensaje directo entre Lari y Axel.
 
 ## Qué conector para qué
@@ -45,7 +45,7 @@ cuenta; después queda.
 |---|---|---|
 | Saber cómo va el servicio o tocar algo del backoffice | **de-confianza** | métricas, pedidos, técnicos y su verificación, señas y conciliación, seguimientos, conversaciones del agente, catálogo y precios, **incidencias** |
 | Ver o contestar conversaciones de WhatsApp del número del servicio | **chatty** | chats escalados, pendientes, sin leer, borradores |
-| Hablar con el equipo | **slack** | `#de-confianza` y `#de-confianza-operacion` en el Slack de Chatty |
+| Hablar con el equipo | **slack** | `#de-confianza` en el Slack de Chatty |
 | Tareas, decisiones, influencers, contenido, pagos | **notion** | la base «Tareas» manda: si no está ahí, no existe |
 
 Detalle de cada uno y sus trampas: `references/conectores.md`.

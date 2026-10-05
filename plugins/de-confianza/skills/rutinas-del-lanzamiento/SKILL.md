@@ -8,7 +8,7 @@ description: Usala para correr o programar las rutinas que sostienen el trabajo 
 Las rutinas existen para que lo que se definió se haga sin que nadie tenga que
 perseguirlo a mano. Leen **Notion** (la base «Tareas» manda) y, cuando hace falta,
 el conector **de-confianza** para el estado real del servicio; publican en
-**Slack** (`#de-confianza` y `#de-confianza-operacion`). Cada una está escrita abajo como prompt listo para programar.
+**Slack** (`#de-confianza`). Cada una está escrita abajo como prompt listo para programar.
 
 ## Reglas de todas
 
@@ -21,7 +21,7 @@ el conector **de-confianza** para el estado real del servicio; publican en
 5. **Si no hay nada, una línea.** Permiso explícito de volver sin nada.
 6. **Una tarea sin responsable, fecha o estado se reporta como tal**, no se adivina.
 7. **No escriben en el backoffice.** Leen. Publicar en Slack es su única acción
-   hacia afuera: en esos dos canales, o por mensaje directo para pagos.
+   hacia afuera: en `#de-confianza`, o por mensaje directo para pagos.
 8. **El camino crítico va primero**: el número de WhatsApp (Meta), los pagos, y
    la cantidad de técnicos de aire acondicionado verificados (meta: 15 al 23/10).
 
