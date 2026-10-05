@@ -22,9 +22,8 @@ Y cuatro habilidades que Claude usa solo cuando hacen falta:
 
 En claude.ai o en la app de Claude:
 
-1. **Customize → Plugins → Add marketplace** y pegá la dirección de este repo.
-   Si te pide entrar a GitHub, entrá con tu cuenta (el repo es privado: Axel te
-   tiene que haber invitado).
+1. **Customize → Plugins → Add marketplace** y pegá `axelgualda/de-confianza-para-claude`.
+   No hace falta cuenta de GitHub: el repo es público.
 2. En la lista aparece **de-confianza**: **Install**.
 3. Abrí una conversación y pedile algo («¿cómo viene el lanzamiento?»). La primera
    vez, cada conector te pide entrar con tu cuenta:
@@ -37,7 +36,7 @@ En claude.ai o en la app de Claude:
 Desde Claude Code también se puede:
 
 ```bash
-claude plugin marketplace add <org>/de-confianza-para-claude
+claude plugin marketplace add axelgualda/de-confianza-para-claude
 claude plugin install de-confianza@de-confianza-para-claude
 ```
 
