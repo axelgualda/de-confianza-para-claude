@@ -77,6 +77,9 @@ Detalle de cada uno y sus trampas: `references/conectores.md`.
 
 ## Cómo se trabaja
 
+- **Un encuentro presencial por semana en la UTN, el resto asincrónico.** Lo que
+  se decide en el encuentro se anota en Notion ese mismo día; si no, las rutinas
+  no se enteran.
 - **Tareas en Notion, conversación en Slack, verdad del servicio en el backoffice.**
   Si algo se decidió en Slack, terminá anotándolo en Notion («Decisiones» o la
   tarea): las rutinas leen Notion, no los hilos.
